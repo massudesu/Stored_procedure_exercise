@@ -138,40 +138,56 @@ O projeto utiliza o banco `loja_tech`, com tabelas relacionadas a uma loja de te
 
 ### Atualização de preços
 
-```sql
 -- Aumento de 10%
 CALL atualizar_preco_categoria(3, 10, @quantidade, @mensagem);
 
 SELECT @quantidade, @mensagem;
+
+<img width="395" height="47" alt="image" src="https://github.com/user-attachments/assets/91560410-3066-4c37-b757-d8161254fda9" />
+
 
 -- Desconto de 20%
 CALL atualizar_preco_categoria(3, -20, @quantidade, @mensagem);
 
 SELECT @quantidade, @mensagem;
 
+<img width="391" height="46" alt="image" src="https://github.com/user-attachments/assets/b71a4cc1-e475-479a-94db-3fad42d923e1" />
+
+
 -- Percentual inválido
 CALL atualizar_preco_categoria(3, -60, @quantidade, @mensagem);
 
 SELECT @quantidade, @mensagem;
-```
+
+<img width="373" height="45" alt="image" src="https://github.com/user-attachments/assets/5b5ff817-1fca-400f-8c1f-f0a29c768828" />
+
+
 
 ### Extrato de cliente
 
-```sql
+
 -- Cliente existente
 CALL consultar_extrato_cliente(1);
 
+<img width="412" height="51" alt="image" src="https://github.com/user-attachments/assets/613268f9-6bd3-4380-a889-c75062b73848" />
+
+
 -- Cliente inexistente
 CALL consultar_extrato_cliente(99);
-```
+
+<img width="200" height="42" alt="image" src="https://github.com/user-attachments/assets/92691839-e854-49e6-b4f1-e6679f34cebd" />
+
 
 ### Consultar registros de log
 
-```sql
+
 SELECT *
 FROM log_operacoes
 ORDER BY id_log DESC;
-```
+
+<img width="682" height="172" alt="image" src="https://github.com/user-attachments/assets/44b6383e-a636-485a-90eb-b38d1879819c" />
+
+
 
 ---
 
